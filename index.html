@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Astra Malorum – Planet Codes</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <h1>Astra Malorum – Planet Codes</h1>
+      <p class="subtitle">Easter Egg Step Tracker.</p>
+    </header>
+
+    <hr class="divider" />
+
+    <!-- Directions -->
+    <div class="section-title">Planet Directions</div>
+    <div class="planet-group">
+      <div class="planet-row">
+        <div class="field-group">
+          <label>Mars</label>
+          <select>
+            <option>—</option><option>NE</option><option>SE</option><option>SW</option><option>NW</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>Neptune</label>
+          <select>
+            <option>—</option><option>NE</option><option>SE</option><option>SW</option><option>NW</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>Saturn</label>
+          <select>
+            <option>—</option><option>NE</option><option>SE</option><option>SW</option><option>NW</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mars Code -->
+    <div class="section-title">Mars Code</div>
+    <div class="planet-group">
+      <div class="field-group">
+        <label>4‑Digit Mars Code</label>
+        <input type="text" maxlength="4" placeholder="Enter 4‑digit code" />
+      </div>
+    </div>
+
+    <!-- Planet Selector -->
+    <div class="section-title">Planet Selector</div>
+    <div class="planet-group">
+
+      <div class="field-group">
+        <label>Planet Choice 1</label>
+        <select class="planet-select">
+          <option value="">Select a planet</option>
+          <option value="Mercury">Mercury</option>
+          <option value="Venus">Venus</option>
+          <option value="Earth">Earth</option>
+          <option value="Mars">Mars</option>
+          <option value="Jupiter">Jupiter</option>
+          <option value="Saturn">Saturn</option>
+          <option value="Uranus">Uranus</option>
+          <option value="Neptune">Neptune</option>
+        </select>
+        <div class="planet-position"></div>
+      </div>
+
+      <div class="field-group">
+        <label>Planet Choice 2</label>
+        <select class="planet-select">
+          <option value="">Select a planet</option>
+          <option value="Mercury">Mercury</option>
+          <option value="Venus">Venus</option>
+          <option value="Earth">Earth</option>
+          <option value="Mars">Mars</option>
+          <option value="Jupiter">Jupiter</option>
+          <option value="Saturn">Saturn</option>
+          <option value="Uranus">Uranus</option>
+          <option value="Neptune">Neptune</option>
+        </select>
+        <div class="planet-position"></div>
+      </div>
+
+      <div class="field-group">
+        <label>Planet Choice 3</label>
+        <select class="planet-select">
+          <option value="">Select a planet</option>
+          <option value="Mercury">Mercury</option>
+          <option value="Venus">Venus</option>
+          <option value="Earth">Earth</option>
+          <option value="Mars">Mars</option>
+          <option value="Jupiter">Jupiter</option>
+          <option value="Saturn">Saturn</option>
+          <option value="Uranus">Uranus</option>
+          <option value="Neptune">Neptune</option>
+        </select>
+        <div class="planet-position"></div>
+      </div>
+
+    </div>
+
+    <!-- Book Code -->
+    <div class="section-title">Book Code</div>
+    <div class="planet-group">
+
+      <div class="field-group">
+        <label>Books 1</label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" name="row1" value="The Black Veil"> The Black Veil</label>
+          <label><input type="checkbox" name="row1" value="The Moon Directive"> The Moon Directive</label>
+          <label><input type="checkbox" name="row1" value="The Musical Universe"> The Musical Universe</label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Books 2</label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" name="row2" value="Ash And Bone"> Ash And Bone</label>
+          <label><input type="checkbox" name="row2" value="The Unknowable Void"> The Unknowable Void</label>
+          <label><input type="checkbox" name="row2" value="Echos Of Andromedia"> Echos Of Andromedia</label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Books 3</label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" name="row3" value="Pyramid Of Cydonia"> Pyramid Of Cydonia</label>
+          <label><input type="checkbox" name="row3" value="Witchlight Codex"> Witchlight Codex</label>
+          <label><input type="checkbox" name="row3" value="Silence At Singulaty"> Silence At Singulaty</label>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Draggable Mars Symbols -->
+    <div class="section-title">Mars Symbols (Drag to Reorder)</div>
+    <div class="planet-group">
+      <div id="symbolContainer" class="planet-row" style="justify-content: space-between;">
+
+        <div class="symbol-item" draggable="true">
+          <span class="symbol-number">1</span>
+          <img src="assets/symbols/193039.png" class="symbol-preview zoomable" />
+        </div>
+
+        <div class="symbol-item" draggable="true">
+          <span class="symbol-number">2</span>
+          <img src="assets/symbols/193044.png" class="symbol-preview zoomable" />
+        </div>
+
+        <div class="symbol-item" draggable="true">
+          <span class="symbol-number">3</span>
+          <img src="assets/symbols/193048.png" class="symbol-preview zoomable" />
+        </div>
+
+        <div class="symbol-item" draggable="true">
+          <span class="symbol-number">4</span>
+          <img src="assets/symbols/193052.png" class="symbol-preview zoomable" />
+        </div>
+
+        <div class="symbol-item" draggable="true">
+          <span class="symbol-number">5</span>
+          <img src="assets/symbols/193114.png" class="symbol-preview zoomable" />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Zoom Modal -->
+    <div id="zoomModal" class="close-area">
+      <img id="zoomImage" src="">
+    </div>
+
+  </div>
+
+  <script src="planets.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

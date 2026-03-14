@@ -1,0 +1,212 @@
+/* ================================
+   GLOBAL THEME VARIABLES
+================================ */
+:root {
+  --bg: #05060a;
+  --panel: #11131b;
+  --accent: #4fd1c5;
+  --accent-soft: rgba(79, 209, 197, 0.15);
+  --text-main: #f5f7ff;
+  --text-muted: #9ca3af;
+  --border: #1f2933;
+  --radius: 8px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* ================================
+   BASE ELEMENTS
+================================ */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-image:
+    radial-gradient(circle at top, rgba(17, 24, 39, 0.6) 0%, rgba(2, 6, 23, 0.4) 45%, rgba(0, 0, 0, 0.4) 100%),
+    url('assets/bg/astra-bg.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+
+  color: var(--text-main);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page {
+  width: 100%;
+  max-width: 800px;
+  padding: 32px 16px 64px;
+}
+
+/* ================================
+   HEADINGS & TEXT
+================================ */
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+.section-title {
+  margin: 16px 0 6px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e5e7eb;
+}
+
+.divider {
+  border: none;
+  border-top: 1px dashed rgba(148, 163, 184, 0.4);
+  margin: 14px 0;
+}
+
+/* ================================
+   PANELS & GROUPS
+================================ */
+.planet-group {
+  margin-bottom: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.planet-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.planet-row .field-group {
+  flex: 1;
+  min-width: 100px;
+}
+
+/* ================================
+   FORM ELEMENTS
+================================ */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+input[type="text"],
+textarea,
+select {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: var(--text-main);
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  resize: vertical;
+  min-height: 30px;
+}
+
+textarea {
+  min-height: 60px;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(79, 209, 197, 0.4);
+}
+
+.checkbox-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ================================
+   SYMBOL GRID & DRAGGABLE ITEMS
+================================ */
+.symbol-item {
+  position: relative;
+  width: 18%;
+  text-align: center;
+  cursor: grab;
+}
+
+.symbol-item:active {
+  cursor: grabbing;
+  opacity: 0.6;
+}
+
+.symbol-preview {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  object-fit: contain;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+/* Number overlay */
+.symbol-number {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* ================================
+   ZOOM MODAL
+================================ */
+#zoomModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#zoomModal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+}
+
+#zoomModal.close-area {
+  cursor: pointer;
+}
+
